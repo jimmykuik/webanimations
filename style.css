@@ -49,3 +49,67 @@ p:nth-of-type(4) {
 p:nth-of-type(5) {
     margin-left: -50px;
 }
+
+
+
+/* kleur classes om naar te switchen */
+
+@keyframes blue {
+  100% {
+    color: blue;
+  }
+}
+
+.blue {
+    animation: blue .5s forwards;
+}
+
+@keyframes red {
+  100% {
+    color: red;
+  }
+}
+
+.red {
+    animation: red .5s forwards;
+}
+
+@keyframes yellow {
+  100% {
+    color: yellow;
+  }
+}
+
+.yellow {
+    animation: yellow .5s forwards;
+}
+
+@keyframes green {
+  100% {
+    color: green;
+  }
+}
+
+.green {
+    animation: green .5s forwards;
+}
+
+@keyframes purple {
+  100% {
+    color: purple;
+  }
+}
+
+.purple {
+    animation: purple .5s forwards;
+}
+
+@keyframes orange {
+  100% {
+    color: orange;
+  }
+}
+
+.orange {
+    animation: orange .5s forwards;
+}
