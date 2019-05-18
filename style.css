@@ -1,0 +1,45 @@
+body {
+    margin: 0;
+    max-width: 800px;
+}
+figure {
+    display: flex;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    justify-content: flex-start;
+    position: fixed;
+    bottom: 0;
+    align-items: flex-end;
+}
+
+figure > svg {
+    margin-right: 1%;
+}
+
+figure > svg:nth-of-type(1) {
+    width: 25em;
+}
+
+figure > svg:nth-of-type(2) {
+    width: 18.6em;
+}
+
+figure > svg:nth-of-type(3) {
+    width: 21em;
+    margin-bottom: -0.5em;
+}
+
+figure > svg:nth-of-type(4) {
+    width: 5.5em;
+    margin-right: 2%;
+}
+
+figure > svg:nth-of-type(5) {
+    width: 5.5em;
+    margin-right: 0;
+}
+
+figure .cls-1, rect {
+    fill: red;
+}
