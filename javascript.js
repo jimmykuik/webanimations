@@ -8,7 +8,6 @@ var logoSecondL = document.querySelector('section > p:nth-of-type(5)');
 
 
 
-
 // Selecteren van letters
 
 logoK.onclick = function() {
@@ -203,6 +202,8 @@ var fontSizeN = 20;
 var fontSizeO = 20;
 var fontSizeFirstL = 20;
 var fontSizeSecondL = 20;
+
+
 
 function changeLetters(e){
     
