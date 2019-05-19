@@ -8,6 +8,7 @@ var logoSecondL = document.querySelector('section > p:nth-of-type(5)');
 
 
 
+
 // Selecteren van letters
 
 logoK.onclick = function() {
@@ -187,8 +188,21 @@ function orangeTimer() {
 }
 
 /* Bron: https://www.youtube.com/watch?v=F7-LqvrCq14 */
-var locationTop = 0;
-var locationLeft = 0;
+var locationTopK = 0;
+var locationTopN = 0;
+var locationTopO = 0;
+var locationTopFirstL = 0;
+var locationTopSecondL = 0;
+var locationLeftK = 0;
+var locationLeftN = 0;
+var locationLeftO = 0;
+var locationLeftFirstL = 0;
+var locationLeftSecondL = 0;
+var fontSizeK = 20;
+var fontSizeN = 20;
+var fontSizeO = 20;
+var fontSizeFirstL = 20;
+var fontSizeSecondL = 20;
 
 function changeLetters(e){
     
@@ -199,122 +213,122 @@ function changeLetters(e){
     /* Bron: https://stackoverflow.com/questions/9587070/if-statement-to-find-a-class-in-javascript */
     /* Bron keyCode: http://keycode.info/ */
     if ((logoK.classList.contains('selected')) && (e.keyCode === 40)) {
-        locationTop += 5;
-        logoK.style.top = (parseInt(locationTop) + locationTop) + "px";
+        locationTopK += 10;
+        logoK.style.top = (parseInt(locationTopK)) + "px";
     }
     
     // pijl rechts letter K
     if ((logoK.classList.contains('selected')) && (e.keyCode === 39)) {
-        locationLeft += 5;
-        logoK.style.left = (parseInt(locationLeft) + locationLeft) + "px";
+        locationLeftK += 10;
+        logoK.style.left = (parseInt(locationLeftK)) + "px";
     }
     
     // pijl omhoog letter K
     if ((logoK.classList.contains('selected')) && (e.keyCode === 38)) {
-        locationTop -= 5;
-        logoK.style.top = (parseInt(locationTop) + locationTop) + "px";
+        locationTopK -= 10;
+        logoK.style.top = (parseInt(locationTopK)) + "px";
     }
     
     // pijl links letter K
     if ((logoK.classList.contains('selected')) && (e.keyCode === 37)) {
-        locationLeft -= 5;
-        logoK.style.left = (parseInt(locationLeft) + locationLeft) + "px";
+        locationLeftK -= 10;
+        logoK.style.left = (parseInt(locationLeftK)) + "px";
     }
     
     // pijl omlaag letter N
     if ((logoN.classList.contains('selected')) && (e.keyCode === 40)) {
-        locationTop += 5;
-        logoN.style.top = (parseInt(locationTop) + locationTop) + "px";
+        locationTopN += 10;
+        logoN.style.top = (parseInt(locationTopN)) + "px";
     }
     
     // pijl rechts letter N
     if ((logoN.classList.contains('selected')) && (e.keyCode === 39)) {
-        locationLeft += 5;
-        logoN.style.left = (parseInt(locationLeft) + locationLeft) + "px";
+        locationLeftN += 10;
+        logoN.style.left = (parseInt(locationLeftN)) + "px";
     }
     
     // pijl omhoog letter N
     if ((logoN.classList.contains('selected')) && (e.keyCode === 38)) {
-        locationTop -= 5;
-        logoN.style.top = (parseInt(locationTop) + locationTop) + "px";
+        locationTopN -= 10;
+        logoN.style.top = (parseInt(locationTopN)) + "px";
     }
     
     // pijl links letter N
     if ((logoN.classList.contains('selected')) && (e.keyCode === 37)) {
-        locationLeft -= 5;
-        logoN.style.left = (parseInt(locationLeft) + locationLeft) + "px";
+        locationLeftN -= 10;
+        logoN.style.left = (parseInt(locationLeftN)) + "px";
     }
     
     // pijl omlaag letter O
     if ((logoO.classList.contains('selected')) && (e.keyCode === 40)) {
-        locationTop += 5;
-        logoO.style.top = (parseInt(locationTop) + locationTop) + "px";
+        locationTopO += 10;
+        logoO.style.top = (parseInt(locationTopO)) + "px";
     }
     
     // pijl rechts letter O
     if ((logoO.classList.contains('selected')) && (e.keyCode === 39)) {
-        locationLeft += 5;
-        logoO.style.left = (parseInt(locationLeft) + locationLeft) + "px";
+        locationLeftO += 10;
+        logoO.style.left = (parseInt(locationLeftO)) + "px";
     }
     
     // pijl omhoog letter O
     if ((logoO.classList.contains('selected')) && (e.keyCode === 38)) {
-        locationTop -= 5;
-        logoO.style.top = (parseInt(locationTop) + locationTop) + "px";
+        locationTopO -= 10;
+        logoO.style.top = (parseInt(locationTopO)) + "px";
     }
     
     // pijl links letter O
     if ((logoO.classList.contains('selected')) && (e.keyCode === 37)) {
-        locationLeft -= 5;
-        logoO.style.left = (parseInt(locationLeft) + locationLeft) + "px";
+        locationLeftO -= 10;
+        logoO.style.left = (parseInt(locationLeftO)) + "px";
     }
     
     // pijl omlaag eerste letter L
     if ((logoFirstL.classList.contains('selected')) && (e.keyCode === 40)) {
-        locationTop += 5;
-        logoFirstL.style.top = (parseInt(locationTop) + locationTop) + "px";
+        locationTopFirstL += 10;
+        logoFirstL.style.top = (parseInt(locationTopFirstL)) + "px";
     }
     
     // pijl rechts eerste letter L
     if ((logoFirstL.classList.contains('selected')) && (e.keyCode === 39)) {
-        locationLeft += 5;
-        logoFirstL.style.left = (parseInt(locationLeft) + locationLeft) + "px";
+        locationLeftFirstL += 10;
+        logoFirstL.style.left = (parseInt(locationLeftFirstL)) + "px";
     }
     
     // pijl omhoog eerste letter L
     if ((logoFirstL.classList.contains('selected')) && (e.keyCode === 38)) {
-        locationTop -= 5;
-        logoFirstL.style.top = (parseInt(locationTop) + locationTop) + "px";
+        locationTopFirstL -= 10;
+        logoFirstL.style.top = (parseInt(locationTopFirstL)) + "px";
     }
     
     // pijl links eerste letter L
     if ((logoFirstL.classList.contains('selected')) && (e.keyCode === 37)) {
-        locationLeft -= 5;
-        logoFirstL.style.left = (parseInt(locationLeft) + locationLeft) + "px";
+        locationLeftFirstL -= 10;
+        logoFirstL.style.left = (parseInt(locationLeftFirstL)) + "px";
     }
     
     // pijl omlaag tweede letter L
     if ((logoSecondL.classList.contains('selected')) && (e.keyCode === 40)) {
-        locationTop += 5;
-        logoSecondL.style.top = (parseInt(locationTop) + locationTop) + "px";
+        locationTopSecondL += 10;
+        logoSecondL.style.top = (parseInt(locationTopSecondL)) + "px";
     }
     
     // pijl rechts tweede letter L
     if ((logoSecondL.classList.contains('selected')) && (e.keyCode === 39)) {
-        locationLeft += 5;
-        logoSecondL.style.left = (parseInt(locationLeft) + locationLeft) + "px";
+        locationLeftSecondL += 10;
+        logoSecondL.style.left = (parseInt(locationLeftSecondL)) + "px";
     }
     
     // pijl omhoog tweede letter L
     if ((logoSecondL.classList.contains('selected')) && (e.keyCode === 38)) {
-        locationTop -= 5;
-        logoSecondL.style.top = (parseInt(locationTop) + locationTop) + "px";
+        locationTopSecondL -= 10;
+        logoSecondL.style.top = (parseInt(locationTopSecondL)) + "px";
     }
     
     // pijl links tweede letter L
     if ((logoSecondL.classList.contains('selected')) && (e.keyCode === 37)) {
-        locationLeft -= 5;
-        logoSecondL.style.left = (parseInt(locationLeft) + locationLeft) + "px";
+        locationLeftSecondL -= 10;
+        logoSecondL.style.left = (parseInt(locationLeftSecondL)) + "px";
     }
     
     
@@ -499,6 +513,54 @@ function changeLetters(e){
     }
     if ((logoSecondL.classList.contains('selected')) && (e.keyCode === 84)) {
         logoSecondL.classList.toggle('blend');
+    }
+    
+    
+    
+    // Maak letters groter
+    if ((logoK.classList.contains('selected')) && (e.keyCode === 221)) {
+        fontSizeK += 1;
+        logoK.style.fontSize = (parseInt(fontSizeK)) + "rem";
+    }
+    if ((logoN.classList.contains('selected')) && (e.keyCode === 221)) {
+        fontSizeN += 1;
+        logoN.style.fontSize = (parseInt(fontSizeN)) + "rem";
+    }
+    if ((logoO.classList.contains('selected')) && (e.keyCode === 221)) {
+        fontSizeO += 1;
+        logoO.style.fontSize = (parseInt(fontSizeO)) + "rem";
+    }
+    if ((logoFirstL.classList.contains('selected')) && (e.keyCode === 221)) {
+        fontSizeFirstL += 1;
+        logoFirstL.style.fontSize = (parseInt(fontSizeFirstL)) + "rem";
+    }
+    if ((logoSecondL.classList.contains('selected')) && (e.keyCode === 221)) {
+        fontSizeSecondL += 1;
+        logoSecondL.style.fontSize = (parseInt(fontSizeSecondL)) + "rem";
+    }
+    
+    
+    
+    // Maak letters kleiner
+    if ((logoK.classList.contains('selected')) && (e.keyCode === 219)) {
+        fontSizeK -= 1;
+        logoK.style.fontSize = (parseInt(fontSizeK)) + "rem";
+    }
+    if ((logoN.classList.contains('selected')) && (e.keyCode === 219)) {
+        fontSizeN -= 1;
+        logoN.style.fontSize = (parseInt(fontSizeN)) + "rem";
+    }
+    if ((logoO.classList.contains('selected')) && (e.keyCode === 219)) {
+        fontSizeO -= 1;
+        logoO.style.fontSize = (parseInt(fontSizeO)) + "rem";
+    }
+    if ((logoFirstL.classList.contains('selected')) && (e.keyCode === 219)) {
+        fontSizeFirstL -= 1;
+        logoFirstL.style.fontSize = (parseInt(fontSizeFirstL)) + "rem";
+    }
+    if ((logoSecondL.classList.contains('selected')) && (e.keyCode === 219)) {
+        fontSizeSecondL -= 1;
+        logoSecondL.style.fontSize = (parseInt(fontSizeSecondL)) + "rem";
     }
 }
 

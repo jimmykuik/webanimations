@@ -14,7 +14,7 @@ section {
 p {
     position: relative;
     font-family: 'Roboto', sans-serif;
-    font-size: 20em;
+    font-size: 20rem;
     color: red;
 }
 
@@ -43,7 +43,7 @@ section > p:nth-of-type(5) {
 }
 
 .selected {
-    text-shadow: 5px 5px 10px #000000;
+    text-shadow: 5px 5px 10px rgba(0,0,0, 0.6);
 }
 
 .blend {
