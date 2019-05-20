@@ -1,81 +1,74 @@
-* {
-    margin: 0px;
-    padding: 0px;
-}
-
-html {
-    height: 100%;
-}
-
-body {
-    overflow: hidden;
-    background-color: #d7edf4;
-}
-
-section {
-    display: flex;
-}
-
-figure {
-    text-align: center;
-}
-
+/* Animaties die afspelen bij het laden van pagina */
+/* Bron: https://stackoverflow.com/questions/6805482/css3-transition-animation-on-load */
 @keyframes slideInFromLeft {
-  0% {
-    transform: translateX(-300%);
-  }
+    0% {
+        transform: translateX(-300%);
+    }
+
     90% {
-    transform: translateX(10%);
-  }
-  100% {
-    transform: translateX(0);
-  }
+        transform: translateX(10%);
+    }
+
+    100% {
+        transform: translateX(0);
+    }
 }
 
 @keyframes slideInFromRight {
-  0% {
-    transform: translateX(300%);
-  }
+    0% {
+        transform: translateX(300%);
+    }
+
     90% {
-    transform: translateX(-10%);
-  }
-  100% {
-    transform: translateX(0);
-  }
+        transform: translateX(-10%);
+    }
+
+    100% {
+        transform: translateX(0);
+    }
 }
 
 @keyframes slideInFromTop {
-  0% {
-    transform: translateY(-300%);
-  }
+    0% {
+        transform: translateY(-300%);
+    }
+
     90% {
-    transform: translateY(10%);
-  }
-  100% {
-    transform: translateY(0);
-  }
+        transform: translateY(10%);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
 }
 
 @keyframes slideInFromBottom {
-  0% {
-    transform: translateY(300%);
-  }
-  90% {
-    transform: translateY(-10%);
-  }
-100% {
-    transform: translateY(0);
-  }
+    0% {
+        transform: translateY(300%);
+    }
+
+    90% {
+        transform: translateY(-10%);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
 }
+
+
+
+/* SVG styling */
+/* Bron pointer-events: https://stackoverflow.com/questions/3680429/click-through-div-to-underlying-elements */
 
 figure > svg:nth-of-type(1) {
     position: fixed;
     bottom: 0;
     left: 0;
-    fill: url(#GradientPlint);
+    fill: #efa562;
     z-index: 6;
     pointer-events: none;
-    animation: 1s easeOutCubic 0s 1 slideInFromBottom;
+    animation: 1s ease-out 0s 1 slideInFromBottom;
 }
 
 figure > svg:nth-of-type(2) {
@@ -93,13 +86,17 @@ figure > svg:nth-of-type(3) {
     position: fixed;
     bottom: 18rem;
     left: 75%;
-    z-index: 8;
+    z-index: 0;
     height: 400px;
     width: 280px;
     display: inline-block;
     pointer-events: none;
     animation: 1s ease-out 0s 1 slideInFromRight;
 }
+
+
+
+/* Automatisch gegenereerde classes voor SVG vanuit illustrator */
 
 .cls-1 {
     isolation: isolate;
@@ -153,6 +150,32 @@ figure > svg:nth-of-type(3) {
     fill: #fff;
 }
 
+
+
+/* Algemene CSS */
+
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+html {
+    height: 100%;
+}
+
+body {
+    overflow: hidden;
+    background-color: #d7edf4;
+}
+
+section {
+    display: flex;
+}
+
+figure {
+    text-align: center;
+}
+
 p {
     position: relative;
     top: 0;
@@ -201,7 +224,8 @@ section > p:nth-of-type(5) {
 }
 
 
-/* kleur classes om naar te switchen */
+
+/* Kleur classes om naar te switchen */
 
 @keyframes blue {
     100% {
@@ -263,17 +287,13 @@ section > p:nth-of-type(5) {
     animation: orange .5s forwards;
 }
 
-@media (max-width: 40.5rem) {
+
+
+/* Media query voor schaalbaarheid */
+
+@media (max-width: 648px) {
     p {
         font-size: 15rem;
-    }
-
-    p:hover {
-        text-shadow: 0 0 10px #000000;
-    }
-
-    .selected {
-        text-shadow: 0 0 10px #000000;
     }
 
     section > p:nth-of-type(2) {

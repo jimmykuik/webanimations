@@ -10,45 +10,45 @@ var logoSecondL = document.querySelector('section > p:nth-of-type(5)');
 
 // Selecteren van letters
 
-logoK.onclick = function() {
+logoK.addEventListener('click', function () {
     logoK.classList.toggle('selected');
     logoN.classList.remove('selected');
     logoO.classList.remove('selected');
     logoFirstL.classList.remove('selected');
     logoSecondL.classList.remove('selected');
-}
+})
 
-logoN.onclick = function() {
+logoN.addEventListener('click', function () {
     logoK.classList.remove('selected');
     logoN.classList.toggle('selected');
     logoO.classList.remove('selected');
     logoFirstL.classList.remove('selected');
     logoSecondL.classList.remove('selected');
-}
+})
 
-logoO.onclick = function() {
+logoO.addEventListener('click', function () {
     logoK.classList.remove('selected');
     logoN.classList.remove('selected');
     logoO.classList.toggle('selected');
     logoFirstL.classList.remove('selected');
     logoSecondL.classList.remove('selected');
-}
+})
 
-logoFirstL.onclick = function() {
+logoFirstL.addEventListener('click', function () {
     logoK.classList.remove('selected');
     logoN.classList.remove('selected');
     logoO.classList.remove('selected');
     logoFirstL.classList.toggle('selected');
     logoSecondL.classList.remove('selected');
-}
+})
 
-logoSecondL.onclick = function() {
+logoSecondL.addEventListener('click', function () {
     logoK.classList.remove('selected');
     logoN.classList.remove('selected');
     logoO.classList.remove('selected');
     logoFirstL.classList.remove('selected');
     logoSecondL.classList.toggle('selected');
-}
+})
 
 
 
@@ -58,19 +58,19 @@ function blueTimer() {
     if (logoK.classList.contains('selected')) {
         logoK.style.color = "blue";
     }
-    
+
     if (logoN.classList.contains('selected')) {
         logoN.style.color = "blue";
     }
-    
+
     if (logoO.classList.contains('selected')) {
         logoO.style.color = "blue";
     }
-    
+
     if (logoFirstL.classList.contains('selected')) {
         logoFirstL.style.color = "blue";
     }
-    
+
     if (logoSecondL.classList.contains('selected')) {
         logoSecondL.style.color = "blue";
     }
@@ -80,107 +80,107 @@ function redTimer() {
     if (logoK.classList.contains('selected')) {
         logoK.style.color = "red";
     }
-    
+
     if (logoN.classList.contains('selected')) {
         logoN.style.color = "red";
     }
-    
+
     if (logoO.classList.contains('selected')) {
         logoO.style.color = "red";
     }
-    
+
     if (logoFirstL.classList.contains('selected')) {
         logoFirstL.style.color = "red";
     }
-    
+
     if (logoSecondL.classList.contains('selected')) {
         logoSecondL.style.color = "red";
     }
 }
 
 function yellowTimer() {
-  if (logoK.classList.contains('selected')) {
+    if (logoK.classList.contains('selected')) {
         logoK.style.color = "yellow";
     }
-    
+
     if (logoN.classList.contains('selected')) {
         logoN.style.color = "yellow";
     }
-    
+
     if (logoO.classList.contains('selected')) {
         logoO.style.color = "yellow";
     }
-    
+
     if (logoFirstL.classList.contains('selected')) {
         logoFirstL.style.color = "yellow";
     }
-    
+
     if (logoSecondL.classList.contains('selected')) {
         logoSecondL.style.color = "yellow";
     }
 }
 
 function greenTimer() {
-  if (logoK.classList.contains('selected')) {
+    if (logoK.classList.contains('selected')) {
         logoK.style.color = "green";
     }
-    
+
     if (logoN.classList.contains('selected')) {
         logoN.style.color = "green";
     }
-    
+
     if (logoO.classList.contains('selected')) {
         logoO.style.color = "green";
     }
-    
+
     if (logoFirstL.classList.contains('selected')) {
         logoFirstL.style.color = "green";
     }
-    
+
     if (logoSecondL.classList.contains('selected')) {
         logoSecondL.style.color = "green";
     }
 }
 
 function purpleTimer() {
-  if (logoK.classList.contains('selected')) {
+    if (logoK.classList.contains('selected')) {
         logoK.style.color = "purple";
     }
-    
+
     if (logoN.classList.contains('selected')) {
         logoN.style.color = "purple";
     }
-    
+
     if (logoO.classList.contains('selected')) {
         logoO.style.color = "purple";
     }
-    
+
     if (logoFirstL.classList.contains('selected')) {
         logoFirstL.style.color = "purple";
     }
-    
+
     if (logoSecondL.classList.contains('selected')) {
         logoSecondL.style.color = "purple";
     }
 }
 
 function orangeTimer() {
-  if (logoK.classList.contains('selected')) {
+    if (logoK.classList.contains('selected')) {
         logoK.style.color = "orange";
     }
-    
+
     if (logoN.classList.contains('selected')) {
         logoN.style.color = "orange";
     }
-    
+
     if (logoO.classList.contains('selected')) {
         logoO.style.color = "orange";
     }
-    
+
     if (logoFirstL.classList.contains('selected')) {
         logoFirstL.style.color = "orange";
     }
-    
+
     if (logoSecondL.classList.contains('selected')) {
         logoSecondL.style.color = "orange";
     }
@@ -202,14 +202,19 @@ var fontSizeN = 20;
 var fontSizeO = 20;
 var fontSizeFirstL = 20;
 var fontSizeSecondL = 20;
+var fontSizeResponsiveK = 15;
+var fontSizeResponsiveN = 15;
+var fontSizeResponsiveO = 15;
+var fontSizeResponsiveFirstL = 15;
+var fontSizeResponsiveSecondL = 15;
 
 
 
-function changeLetters(e){
-    
-    
+function changeLetters(e) {
+
+
     // Verander positie van letters
-    
+
     // pijl omlaag letter K
     /* Bron: https://stackoverflow.com/questions/9587070/if-statement-to-find-a-class-in-javascript */
     /* Bron keyCode: http://keycode.info/ */
@@ -217,125 +222,126 @@ function changeLetters(e){
         locationTopK += 10;
         logoK.style.top = (parseInt(locationTopK)) + "px";
     }
-    
+
     // pijl rechts letter K
     if ((logoK.classList.contains('selected')) && (e.keyCode === 39)) {
         locationLeftK += 10;
         logoK.style.left = (parseInt(locationLeftK)) + "px";
     }
-    
+
     // pijl omhoog letter K
     if ((logoK.classList.contains('selected')) && (e.keyCode === 38)) {
         locationTopK -= 10;
         logoK.style.top = (parseInt(locationTopK)) + "px";
     }
-    
+
     // pijl links letter K
     if ((logoK.classList.contains('selected')) && (e.keyCode === 37)) {
         locationLeftK -= 10;
         logoK.style.left = (parseInt(locationLeftK)) + "px";
     }
-    
+
     // pijl omlaag letter N
     if ((logoN.classList.contains('selected')) && (e.keyCode === 40)) {
         locationTopN += 10;
         logoN.style.top = (parseInt(locationTopN)) + "px";
     }
-    
+
     // pijl rechts letter N
     if ((logoN.classList.contains('selected')) && (e.keyCode === 39)) {
         locationLeftN += 10;
         logoN.style.left = (parseInt(locationLeftN)) + "px";
     }
-    
+
     // pijl omhoog letter N
     if ((logoN.classList.contains('selected')) && (e.keyCode === 38)) {
         locationTopN -= 10;
         logoN.style.top = (parseInt(locationTopN)) + "px";
     }
-    
+
     // pijl links letter N
     if ((logoN.classList.contains('selected')) && (e.keyCode === 37)) {
         locationLeftN -= 10;
         logoN.style.left = (parseInt(locationLeftN)) + "px";
     }
-    
+
     // pijl omlaag letter O
     if ((logoO.classList.contains('selected')) && (e.keyCode === 40)) {
         locationTopO += 10;
         logoO.style.top = (parseInt(locationTopO)) + "px";
     }
-    
+
     // pijl rechts letter O
     if ((logoO.classList.contains('selected')) && (e.keyCode === 39)) {
         locationLeftO += 10;
         logoO.style.left = (parseInt(locationLeftO)) + "px";
     }
-    
+
     // pijl omhoog letter O
     if ((logoO.classList.contains('selected')) && (e.keyCode === 38)) {
         locationTopO -= 10;
         logoO.style.top = (parseInt(locationTopO)) + "px";
     }
-    
+
     // pijl links letter O
     if ((logoO.classList.contains('selected')) && (e.keyCode === 37)) {
         locationLeftO -= 10;
         logoO.style.left = (parseInt(locationLeftO)) + "px";
     }
-    
+
     // pijl omlaag eerste letter L
     if ((logoFirstL.classList.contains('selected')) && (e.keyCode === 40)) {
         locationTopFirstL += 10;
         logoFirstL.style.top = (parseInt(locationTopFirstL)) + "px";
     }
-    
+
     // pijl rechts eerste letter L
     if ((logoFirstL.classList.contains('selected')) && (e.keyCode === 39)) {
         locationLeftFirstL += 10;
         logoFirstL.style.left = (parseInt(locationLeftFirstL)) + "px";
     }
-    
+
     // pijl omhoog eerste letter L
     if ((logoFirstL.classList.contains('selected')) && (e.keyCode === 38)) {
         locationTopFirstL -= 10;
         logoFirstL.style.top = (parseInt(locationTopFirstL)) + "px";
     }
-    
+
     // pijl links eerste letter L
     if ((logoFirstL.classList.contains('selected')) && (e.keyCode === 37)) {
         locationLeftFirstL -= 10;
         logoFirstL.style.left = (parseInt(locationLeftFirstL)) + "px";
     }
-    
+
     // pijl omlaag tweede letter L
     if ((logoSecondL.classList.contains('selected')) && (e.keyCode === 40)) {
         locationTopSecondL += 10;
         logoSecondL.style.top = (parseInt(locationTopSecondL)) + "px";
     }
-    
+
     // pijl rechts tweede letter L
     if ((logoSecondL.classList.contains('selected')) && (e.keyCode === 39)) {
         locationLeftSecondL += 10;
         logoSecondL.style.left = (parseInt(locationLeftSecondL)) + "px";
     }
-    
+
     // pijl omhoog tweede letter L
     if ((logoSecondL.classList.contains('selected')) && (e.keyCode === 38)) {
         locationTopSecondL -= 10;
         logoSecondL.style.top = (parseInt(locationTopSecondL)) + "px";
     }
-    
+
     // pijl links tweede letter L
     if ((logoSecondL.classList.contains('selected')) && (e.keyCode === 37)) {
         locationLeftSecondL -= 10;
         logoSecondL.style.left = (parseInt(locationLeftSecondL)) + "px";
     }
-    
-    
+
+
     // Verander kleur van letters
-    
+
     // Blauw
+    // Bron timer: https://flaviocopes.com/javascript-timers/
     if ((logoK.classList.contains('selected')) && (e.keyCode === 66)) {
         logoK.classList.add('blue');
         logoK.classList.remove('red', 'yellow', 'green', 'orange', 'purple');
@@ -361,7 +367,7 @@ function changeLetters(e){
         logoSecondL.classList.remove('red', 'yellow', 'green', 'orange', 'purple');
         setTimeout(blueTimer, 600);
     }
-    
+
     // Rood
     if ((logoK.classList.contains('selected')) && (e.keyCode === 82)) {
         logoK.classList.add('red');
@@ -388,7 +394,7 @@ function changeLetters(e){
         logoSecondL.classList.remove('blue', 'yellow', 'green', 'orange', 'purple');
         setTimeout(redTimer, 600);
     }
-    
+
     // Geel
     if ((logoK.classList.contains('selected')) && (e.keyCode === 89)) {
         logoK.classList.add('yellow');
@@ -415,7 +421,7 @@ function changeLetters(e){
         logoSecondL.classList.remove('blue', 'red', 'green', 'orange', 'purple');
         setTimeout(yellowTimer, 600);
     }
-    
+
     // Groen
     if ((logoK.classList.contains('selected')) && (e.keyCode === 71)) {
         logoK.classList.add('green');
@@ -442,7 +448,7 @@ function changeLetters(e){
         logoSecondL.classList.remove('blue', 'red', 'yellow', 'orange', 'purple');
         setTimeout(greenTimer, 600);
     }
-    
+
     // Paars
     if ((logoK.classList.contains('selected')) && (e.keyCode === 80)) {
         logoK.classList.add('purple');
@@ -469,7 +475,7 @@ function changeLetters(e){
         logoSecondL.classList.remove('blue', 'red', 'yellow', 'orange', 'green');
         setTimeout(purpleTimer, 600);
     }
-    
+
     // Oranje
     if ((logoK.classList.contains('selected')) && (e.keyCode === 79)) {
         logoK.classList.add('orange');
@@ -496,9 +502,9 @@ function changeLetters(e){
         logoSecondL.classList.remove('blue', 'red', 'yellow', 'purple', 'green');
         setTimeout(orangeTimer, 600);
     }
-    
-    
-    
+
+
+
     // Toggle blendmode op letter
     if ((logoK.classList.contains('selected')) && (e.keyCode === 84)) {
         logoK.classList.toggle('blend');
@@ -515,53 +521,100 @@ function changeLetters(e){
     if ((logoSecondL.classList.contains('selected')) && (e.keyCode === 84)) {
         logoSecondL.classList.toggle('blend');
     }
-    
-    
-    
+
+
+
     // Maak letters groter
-    if ((logoK.classList.contains('selected')) && (e.keyCode === 221)) {
+    if (logoK.classList.contains('selected') && e.keyCode === 221) {
         fontSizeK += 1;
         logoK.style.fontSize = (parseInt(fontSizeK)) + "rem";
     }
-    if ((logoN.classList.contains('selected')) && (e.keyCode === 221)) {
+    if (logoN.classList.contains('selected') && e.keyCode === 221) {
         fontSizeN += 1;
         logoN.style.fontSize = (parseInt(fontSizeN)) + "rem";
     }
-    if ((logoO.classList.contains('selected')) && (e.keyCode === 221)) {
+    if (logoO.classList.contains('selected') && e.keyCode === 221) {
         fontSizeO += 1;
         logoO.style.fontSize = (parseInt(fontSizeO)) + "rem";
     }
-    if ((logoFirstL.classList.contains('selected')) && (e.keyCode === 221)) {
+    if (logoFirstL.classList.contains('selected') && e.keyCode === 221) {
         fontSizeFirstL += 1;
         logoFirstL.style.fontSize = (parseInt(fontSizeFirstL)) + "rem";
     }
-    if ((logoSecondL.classList.contains('selected')) && (e.keyCode === 221)) {
+    if (logoSecondL.classList.contains('selected') && e.keyCode === 221) {
         fontSizeSecondL += 1;
         logoSecondL.style.fontSize = (parseInt(fontSizeSecondL)) + "rem";
     }
-    
-    
-    
+
+
+
     // Maak letters kleiner
-    if ((logoK.classList.contains('selected')) && (e.keyCode === 219)) {
+    if (logoK.classList.contains('selected') && e.keyCode === 219) {
         fontSizeK -= 1;
         logoK.style.fontSize = (parseInt(fontSizeK)) + "rem";
     }
-    if ((logoN.classList.contains('selected')) && (e.keyCode === 219)) {
+    if (logoN.classList.contains('selected') && e.keyCode === 219) {
         fontSizeN -= 1;
         logoN.style.fontSize = (parseInt(fontSizeN)) + "rem";
     }
-    if ((logoO.classList.contains('selected')) && (e.keyCode === 219)) {
+    if (logoO.classList.contains('selected') && e.keyCode === 219) {
         fontSizeO -= 1;
         logoO.style.fontSize = (parseInt(fontSizeO)) + "rem";
     }
-    if ((logoFirstL.classList.contains('selected')) && (e.keyCode === 219)) {
+    if (logoFirstL.classList.contains('selected') && e.keyCode === 219) {
         fontSizeFirstL -= 1;
         logoFirstL.style.fontSize = (parseInt(fontSizeFirstL)) + "rem";
     }
-    if ((logoSecondL.classList.contains('selected')) && (e.keyCode === 219)) {
+    if (logoSecondL.classList.contains('selected') && e.keyCode === 219) {
         fontSizeSecondL -= 1;
         logoSecondL.style.fontSize = (parseInt(fontSizeSecondL)) + "rem";
+    }
+
+    
+    // Maak letters groter responsive
+    // Bron window.matchMedia: http://www.javascriptkit.com/dhtmltutors/cssmediaqueries4.shtml
+    if (logoK.classList.contains('selected') && e.keyCode === 221 && window.matchMedia('(max-width: 648px)').matches) {
+        fontSizeResponsiveK += 1;
+        logoK.style.fontSize = (parseInt(fontSizeResponsiveK)) + "rem";
+    }
+    if (logoN.classList.contains('selected') && e.keyCode === 221 && window.matchMedia('(max-width: 648px)').matches) {
+        fontSizeResponsiveN += 1;
+        logoN.style.fontSize = (parseInt(fontSizeResponsiveN)) + "rem";
+    }
+    if (logoO.classList.contains('selected') && e.keyCode === 221 && window.matchMedia('(max-width: 648px)').matches) {
+        fontSizeResponsiveO += 1;
+        logoO.style.fontSize = (parseInt(fontSizeResponsiveO)) + "rem";
+    }
+    if (logoFirstL.classList.contains('selected') && e.keyCode === 221 && window.matchMedia('(max-width: 648px)').matches) {
+        fontSizeResponsiveFirstL += 1;
+        logoFirstL.style.fontSize = (parseInt(fontSizeResponsiveFirstL)) + "rem";
+    }
+    if (logoSecondL.classList.contains('selected') && e.keyCode === 221 && window.matchMedia('(max-width: 648px)').matches) {
+        fontSizeResponsiveSecondL += 1;
+        logoSecondL.style.fontSize = (parseInt(fontSizeResponsiveSecondL)) + "rem";
+    }
+
+    
+    // Maak letters kleiner
+    if (logoK.classList.contains('selected') && e.keyCode === 219 && window.matchMedia('(max-width: 648px)').matches) {
+        fontSizeResponsiveK -= 1;
+        logoK.style.fontSize = (parseInt(fontSizeResponsiveK)) + "rem";
+    }
+    if (logoN.classList.contains('selected') && e.keyCode === 219 && window.matchMedia('(max-width: 648px)').matches) {
+        fontSizeResponsiveN -= 1;
+        logoN.style.fontSize = (parseInt(fontSizeResponsiveN)) + "rem";
+    }
+    if (logoO.classList.contains('selected') && e.keyCode === 219 && window.matchMedia('(max-width: 648px)').matches) {
+        fontSizeResponsiveO -= 1;
+        logoO.style.fontSize = (parseInt(fontSizeResponsiveO)) + "rem";
+    }
+    if (logoFirstL.classList.contains('selected') && e.keyCode === 219 && window.matchMedia('(max-width: 648px)').matches) {
+        fontSizeResponsiveFirstL -= 1;
+        logoFirstL.style.fontSize = (parseInt(fontSizeResponsiveFirstL)) + "rem";
+    }
+    if (logoSecondL.classList.contains('selected') && e.keyCode === 219 && window.matchMedia('(max-width: 648px)').matches) {
+        fontSizeResponsiveSecondL -= 1;
+        logoSecondL.style.fontSize = (parseInt(fontSizeResponsiveSecondL)) + "rem";
     }
 }
 
