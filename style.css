@@ -63,6 +63,18 @@
 
 figure > svg:nth-of-type(1) {
     position: fixed;
+    bottom: 19rem;
+    left: 60%;
+    z-index: 1;
+    height: 400px;
+    width: 280px;
+    display: inline-block;
+    animation: 1s ease-out 0s 1 slideInFromRight;
+    transition: transform .5s ease;
+}
+
+figure > svg:nth-of-type(2) {
+    position: fixed;
     bottom: 0;
     left: 0;
     fill: #efa562;
@@ -71,27 +83,64 @@ figure > svg:nth-of-type(1) {
     animation: 1s ease-out 0s 1 slideInFromBottom;
 }
 
-figure > svg:nth-of-type(2) {
+figure > svg:nth-of-type(3) {
     position: fixed;
     bottom: 0;
     z-index: 7;
     height: 200px;
     width: 480px;
     display: inline-block;
-    pointer-events: none;
     animation: 1s ease-out 0s 1 slideInFromLeft;
 }
 
-figure > svg:nth-of-type(3) {
+figure > svg:nth-of-type(4) {
     position: fixed;
-    bottom: 18rem;
-    left: 75%;
+    bottom: 14rem;
+    left: 60%;
     z-index: 0;
     height: 400px;
     width: 280px;
     display: inline-block;
-    pointer-events: none;
     animation: 1s ease-out 0s 1 slideInFromRight;
+    pointer-events: none;
+}
+
+figure > svg:nth-of-type(3):hover {
+    transform: rotate(2deg);
+}
+
+.closedBlinds {
+    transform: translate(0px, 65px);
+    transition: transform .5s ease;
+}
+
+.openBlinds {
+    transform: translate(0px, 0px);
+    transition: transform .5s ease;
+}
+
+.blindsPartOne {
+    height: 110px;
+    transition: height .5s ease;
+}
+
+.blindsPartTwo {
+    height: 45px;
+    transition: height .5s ease;
+}
+
+.dark {
+    background-color: #427884;
+    transition: background-color .5s ease;
+}
+
+.light {
+    background-color: #d7edf4;
+    transition: background-color .5s ease;
+}
+
+figure > svg:nth-of-type(1) > path:hover {
+    fill: #6882bc;
 }
 
 
@@ -165,7 +214,6 @@ html {
 
 body {
     overflow: hidden;
-    background-color: #d7edf4;
 }
 
 nav {
@@ -302,7 +350,7 @@ section > p:nth-of-type(5) {
 /* Media query voor schaalbaarheid */
 
 @media (max-width: 648px) {
-    figure > svg:nth-of-type(1) {
+    figure > svg:nth-of-type(3) {
     bottom: 62px;
 }
 

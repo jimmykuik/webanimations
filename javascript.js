@@ -644,6 +644,10 @@ var buttonDown = document.querySelector('body > ul:nth-of-type(3) > li:nth-of-ty
 var subMenuOne = document.querySelector('body > ul:nth-of-type(1)');
 var subMenuTwo = document.querySelector('body > ul:nth-of-type(2)');
 var subMenuThree = document.querySelector('body > ul:nth-of-type(3)');
+var windowBlinds = document.querySelector('figure > svg:nth-of-type(1) > path');
+var blindsPartOne = document.querySelector('figure > svg:nth-of-type(1) > g:nth-of-type(1) > rect');
+var blindsPartTwo = document.querySelector('figure > svg:nth-of-type(1) > g:nth-of-type(3)');
+var bodyElement = document.querySelector('body');
 
 var openSubMenuOne = function () {
     subMenuOne.classList.toggle('visible');
@@ -1018,3 +1022,16 @@ var changeMobileBlend = function () {
 }
 
 navButtonTwo.addEventListener('click', changeMobileBlend);
+
+var closeBlinds = function () {
+    windowBlinds.classList.toggle('closedBlinds');
+    blindsPartTwo.classList.toggle('closedBlinds');
+    windowBlinds.classList.toggle('openBlinds');
+    blindsPartTwo.classList.toggle('openBlinds');
+    blindsPartOne.classList.toggle('blindsPartOne');
+    blindsPartOne.classList.toggle('blindsPartTwo');
+    bodyElement.classList.toggle('dark');
+    bodyElement.classList.toggle('light');
+}
+
+windowBlinds.addEventListener('click', closeBlinds);
