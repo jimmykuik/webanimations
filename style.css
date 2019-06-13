@@ -168,6 +168,15 @@ body {
     background-color: #d7edf4;
 }
 
+nav {
+    display: none;
+    z-index: 20;
+}
+
+body > ul {
+    display: none;
+}
+
 section {
     display: flex;
 }
@@ -185,6 +194,7 @@ p {
     color: red;
     transition: text-shadow .3s ease, top .5s ease, left .5s ease, font-size .5s ease, mix-blend-mode .5s ease;
     animation: 1s ease-out 0s 1 slideInFromTop;
+    user-select: none;
 }
 
 p:hover {
@@ -292,6 +302,14 @@ section > p:nth-of-type(5) {
 /* Media query voor schaalbaarheid */
 
 @media (max-width: 648px) {
+    figure > svg:nth-of-type(1) {
+    bottom: 62px;
+}
+
+figure > svg:nth-of-type(2) {
+    bottom: 62px;
+}
+    
     p {
         font-size: 15rem;
     }
@@ -310,5 +328,105 @@ section > p:nth-of-type(5) {
 
     section > p:nth-of-type(5) {
         margin-left: -1.4rem;
+    }
+    
+    body {
+        margin: 0;
+        padding: 0;
+    }
+
+    .visible {
+        display: flex;
+        height: 61px;
+    }
+
+
+    /* Submenu one */
+    body > ul {
+        background-color: #222;
+        margin: 0;
+        padding: 0;
+        position: fixed;
+        bottom: 61px;
+        width: 100%;
+        justify-content: center;
+        flex-grow: 1;
+        height: 0px;
+        z-index: 20;
+        opacity: .9;
+    }
+    
+    body > ul li {
+        margin: 0;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        height: 100%;
+        align-items: center;
+    }
+    
+    body > ul:first-of-type li:nth-of-type(1) {
+        background-color: red;
+    }
+    
+    body > ul:first-of-type li:nth-of-type(2) {
+        background-color: orange;
+    }
+    
+    body > ul:first-of-type li:nth-of-type(3) {
+        background-color: yellow;
+    }
+    
+    body > ul:first-of-type li:nth-of-type(4) {
+        background-color: green;
+    }
+    
+    body > ul:first-of-type li:nth-of-type(5) {
+        background-color: purple;
+    }
+    
+    body > ul:first-of-type li:nth-of-type(6) {
+        background-color: blue;
+    }
+
+
+    /* Main nav */
+    nav {
+        display: block;
+        background-color: #333;
+        margin: 0;
+        padding: 0;
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+    }
+
+    nav ul {
+        margin: 0;
+        padding: 0;
+        display: flex;
+        width: 100%;
+        justify-content: center;
+        flex-grow: 1;
+    }
+
+    nav ul li {
+        margin: 0;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        border-right: 1px solid;
+        width: 100%;
+        height: 100%;
+        align-items: center;
+    }
+
+    li > svg {
+        width: 25px;
+        height: 30px;
+        fill: white;
+        pointer-events: none;
+        margin: 1em;
     }
 }
